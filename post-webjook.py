@@ -9,6 +9,7 @@ def webhook():
     if request.method == 'POST':
         print('SUCCESS. 200 response will be sent', file=sys.stdout)
         print(request.json, file=sys.stdout)
+        sys.stdout.write(request.json)
         return request.json, 200
     else:
         abort(400)
