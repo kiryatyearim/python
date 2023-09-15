@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    print( "Insode /webhook endpoint" )
+    print( "Insode /webhook endpoint", end=' ', flush=True )
     if request.method == 'POST':
         sys.stdout.write('SUCCESS. 200 response will be sent')
         data = request.json
